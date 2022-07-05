@@ -1,5 +1,10 @@
 # climbingstats
-Climbing competition statistics based on data scraped from the IFSC website. Data from the years 2008-2022 because IFSC started reporting results in terms of tops and zones (bonuses) in 2008. So far only bouldering stats are presented. I'll do lead at some point. 
+Climbing competition statistics based on data scraped from the IFSC website. Data from the years 2008-2022 because IFSC started reporting results in terms of tops and zones (bonuses) in 2008. So far only stats bouldering world cups are presented. Lead will be added eventually. You can see the rankings here:
+
+https://stanrusak.github.io/climbingstats/
+
+
+### Data
 
 The data can be found in the `data` folder. `event_data.json` contains the full data of IFSC World Cup events, including boulder, lead, and speed.
 
