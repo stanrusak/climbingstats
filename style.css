@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Oswald-Bold;
+  src: url(./fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: Oswald-Regular;
+  src: url(./fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald-SuperBold;
+  src: url(./fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: Oswald_bold;
+  src: url(./fonts/Oswald-Bold.ttf);
+}
+
+body {
+  font-family: Oswald-Regular;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  background: #1b2839;
+  color: #e6007e;
+  text-shadow: none;
+}
+
+h1 {
+  text-align: center;
+  color: #dfdfdf;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h4 {
+  color: #1b2839;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #1b2839;
+}
+
+#container {
+  background-color: #fff;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px 0 0;
+}
+
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+table {
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+thead {
+  color: white;
+  background-color: #10bbef;
+  padding: 5px 10px;
+  font-family: Oswald-Bold;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 0px;
+}
+
+tbody tr {
+  background: none repeat scroll 0 0 #f7f7f7 !important;
+}
+
+th {
+  text-align: center;
+  padding: 5px;
+}
+
+.rank {
+  font-weight: 500;
+  padding: 0px 0px;
+  color: #aa9342;
+}
+
+td {
+  padding: 0px 0px;
+  color: #1b2839;
+}
+
+td img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+td.header {
+  background-color: #aa9342;
+  color: white;
+}
+
+td a {
+  color: #10bbef;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+td a:hover {
+  text-decoration: none;
+  color: #e6007e;
+}
+
+/*
+p {
+  margin: 0 0 0px;
+}
+
+.event_title {
+  font-size: 30px;
+  font-family: Oswald-SuperBold;
+  text-transform: uppercase;
+}
+
+.event_date {
+  color: #aa9342;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.category {
+  color: #10bbef;
+  font-weight: 300;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#categories-list a {
+  padding-right: 10px;
+  color: #10bbef;
+  font-size: 16px;
+  font: Oswald-Regular;
+  text-transform: uppercase;
+}
+
+
+
+
+
+.footer {
+  color: white;
+  background-color: #10bbef;
+  padding: 5px 10px;
+  font-family: Oswald-Bold;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 0px;
+}
+
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+  padding: 5px;
+  border-top: 0px;
+}
+
+#table_id {
+  border-collapse: separate;
+  border-spacing: 0px 1px;
+  *border-collapse: expression("separate", cellSpacing = "10px");
+}
+
+tbody tr {
+  background: none repeat scroll 0 0 #f7f7f7 !important;
+}
+
+.rank {
+  text-align: center;
+}
+
+.nation {
+  text-align: center;
+}
+
+td {
+  font-family: Oswald-Bold;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+td a {
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+td a:hover {
+  text-decoration: none;
+  color: #e6007e;
+}
+
+a {
+  color: #10bbef;
+  text-decoration: none;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e6007e;
+}
+
+.customSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px;
+  background: #f7f7f7;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  width: 70%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0px;
+  color: black;
+}
+
+select:focus {
+  outline: none;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 0px;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  border-bottom: 0px;
+}
+
+table p {
+  color: #aa9342;
+}
+
+table.dataTable tbody td {
+  padding: 2px 10px;
+  text-transform: uppercase;
+}
+*/
