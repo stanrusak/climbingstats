@@ -135,6 +135,7 @@ p {
   text-align: center;
   color: var(--clr-black);
   padding: 0 10em;
+  margin-bottom: 1em;
 }
 
 #container {
