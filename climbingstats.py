@@ -3,7 +3,7 @@ import pandas as pd
 pd.options.mode.chained_assignment = None
 
 from IPython.display import display, HTML
-from tqdm.notebook import tqdm
+from tqdm.auto import tqdm
 
 import json
 import plotly.express as px
@@ -236,6 +236,7 @@ class EventDict(dict):
             years = [years]
         athletes = AthleteDict()
         
+        athletes.years = years
         for year in years:
             
             events = self[year]
@@ -279,18 +280,19 @@ class EventDict(dict):
         if printout:
             print("Processing...")
         
+        
         if period == 'all':
             years = [int(year) for year in data.keys()]
         elif isinstance(period, int):
             progress = False
             years = [period]
         elif len(period) == 2:
-            years = reversed(range(min(period), max(period)+1))
+            years = list(reversed(range(min(period), max(period)+1)))
         else:
             raise ValueError(f"Unsupported value {period} for period.")
+        result.years = years
         
         if progress:
-            years = list(years)
             pbar = tqdm(range(len(years)))
         for year in years:
             
