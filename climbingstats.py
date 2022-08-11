@@ -418,7 +418,7 @@ class AthleteDict(dict):
 
 def get_event_data(filename='/data/full_data.json', period=(2008,2022)):
 
-    return EventDict.read_json('normalized.json', period=(2008,2022))
+    return EventDict.read_json('normalized.json', period=period)
 
 
 def get_yearly_data(events, period, elite_cutoff=10):
