@@ -264,6 +264,33 @@ class EventDict(dict):
             athletes.get_heights()
         
         return athletes
+
+    def get_athlete_results(self, name: str, drop: bool=True):
+        """ Get results for a single athlete """
+        
+        
+        lst = []
+        for year in self:
+            for event in self[year]:
+                
+                if not "BOULDER Men" in event.results:
+                    continue
+                
+                for sex in ["Men", "Women"]:
+                    results = event.results["BOULDER " + sex]
+                    entry = results[results.name == name]
+                    entry.insert(0,"year", year)
+                    entry.insert(1,"event",event.name)
+                    if not entry.empty:
+                        lst.append(entry)
+
+        df = pd.concat(lst)
+        
+        if drop:            
+            df = df.drop(columns=["name","athlete_id", "country"])
+        
+        
+        return df.reset_index(drop=True)
         
     @staticmethod
     def read_json(filename, period='all', printout=False, progress=True):
