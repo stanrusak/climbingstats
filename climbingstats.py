@@ -88,7 +88,7 @@ class Event:
     @staticmethod
     def _get_ranking(results):
     
-        results = results["rank"].dropna().astype(int)
+        results = results["rank"].fillna(0).astype(int)
         counts = results.value_counts().sort_index().to_dict()
         return results.apply(lambda place: Event._calculate_ranking(place, counts))
     
@@ -101,7 +101,7 @@ class Event:
 class Athlete:
     """ Object storing athlete data."""
     
-    RANKING = [None, 1000, 805, 690, 610, 545, 495, 455, 415, 380, 350, 325, 300, 280, 260, 240, 220, 205, 185, 170, 155, 145, 130, 120, 105, 95, 84, 73, 63, 56, 48, 42, 37, 33, 30, 27, 24, 21, 19, 17, 15, 14, 13, 12, 11, 11, 10, 9, 9, 8, 8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+    RANKING = [0, 1000, 805, 690, 610, 545, 495, 455, 415, 380, 350, 325, 300, 280, 260, 240, 220, 205, 185, 170, 155, 145, 130, 120, 105, 95, 84, 73, 63, 56, 48, 42, 37, 33, 30, 27, 24, 21, 19, 17, 15, 14, 13, 12, 11, 11, 10, 9, 9, 8, 8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
     
     def __init__(self, name, sex, country, ifsc_id):
         
@@ -445,7 +445,7 @@ class AthleteDict(dict):
 
 def get_event_data(filename='/data/full_data.json', period=(2008,2022)):
 
-    return EventDict.read_json('normalized.json', period=period)
+    return EventDict.read_json(filename, period=period)
 
 
 def get_yearly_data(events, period, elite_cutoff=10):
