@@ -423,7 +423,7 @@ class AthleteDict(dict):
             df = pd.concat([df,athlete.datarow()], ignore_index=True)
         
         df["top_percentage"] = df["tops"]/df["boulders_attempted"]
-        df["ranking_per_event_B"] = df["ranking_B"]/df["events_B"]
+        df["ranking_per_event_B"] = np.round(df["ranking_B"]/df["events_B"],2)
         
         if all(df["height"].isna()):
             df.drop(columns="height", inplace=True)
